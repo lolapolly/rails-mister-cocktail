@@ -1,0 +1,17 @@
+<div class="text-center">
+  <h1><%= @cocktail.name %></h1>
+  <%= link_to 'See ingredients', cocktail_doses_path(@cocktail)%></div>
+<div class="container mx-3">
+  <br>
+  <h3>Add an ingredient</h3>
+    <%= simple_form_for [@cocktail, @dose] do |f|%>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "Add an ingredient", class: "btn btn-primary"%>
+    <% end %>
+</div>
+
+
+
+
+
