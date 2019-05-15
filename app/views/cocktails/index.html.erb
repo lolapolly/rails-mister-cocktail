@@ -3,7 +3,7 @@
 <% @cocktails.each do |cocktail| %>
 <ul style="list-style: none">
   <li><%= link_to cocktail.name, cocktail_path(cocktail)%>
-    <%= link_to '- delete', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= link_to '- delete', cocktail, method: :delete, data: { confirm: 'Are you sure?' } %></i>
   </li>
 </ul>
 
