@@ -28,39 +28,44 @@
 
 }
 
-.cocktail-box {
-  position: absolute;
-  top: 40px;
-  bottom: 40px;
 
-
-}
 
 .logo {
   height: 72px;
 
 }
 
-.text-box{
+.text-box {
   position: absolute;
   top: 50%;
-  left: 62%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   padding: 30px;
+  text-align: center;
+
+
+
+
 
    h1 {
 
     line-height: 1.6em !important;
   }
+
+}
+
+.text-box i {
+  font: $headers-font !important;
 }
 
 .heading-primary {
   display: block;
   color: white;
   text-transform: uppercase;
-
+  backface-visibility: hidden;
 }
+
 .heading-primary-main {
   display: block;
   font-size: 60px;
@@ -70,10 +75,8 @@
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
 
-
-
-
 }
+
 
 .heading-primary-sub {
   display: block;
