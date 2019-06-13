@@ -1,11 +1,14 @@
 <header class="banner">
   <div class="cocktail-logo">
-    <%= image_tag "cocktail_2.png", alt: "logo" %>
+    <%= image_tag "cocktail_2.png", alt: "logo", class:"logo" %>
   </div>
 
-  <div class="container">
-    <strong><h1>Cocktails Word!</h1></strong>
-    <p>Create your own cocktails and be a master.</p>
+  <div class="text-box">
+    <h1 class="heading-primary" >
+      <span class="heading-primary-main"> Cocktail world</span>
+      <span class="heading-primary-sub"> Create your own cocktails and become a master</span>
+    </h1>
+
     <%= link_to new_cocktail_path do %>
       <i class="fas fa-plus"> Create a new cocktail</i>
     <% end %>

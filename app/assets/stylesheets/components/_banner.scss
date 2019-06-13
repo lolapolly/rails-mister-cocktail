@@ -9,32 +9,17 @@
   // padding: 150px 0;
   height: 95vh;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-
-
- img {
-
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-
-  }
+  position:relative;
 }
 
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 40px;
-  font-weight: bold;
-}
+// .banner h1 {
+//   margin: 0;
+//   color: white;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   font-size: 40px;
+//   font-weight: bold;
+// }
 
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
 
 .banner a {
   text-decoration: none;
@@ -42,3 +27,122 @@
   font-size: 24px;
 
 }
+
+.cocktail-box {
+  position: absolute;
+  top: 40px;
+  bottom: 40px;
+
+
+}
+
+.logo {
+  height: 72px;
+
+}
+
+.text-box{
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 30px;
+
+   h1 {
+
+    line-height: 1.6em !important;
+  }
+}
+
+.heading-primary {
+  display: block;
+  color: white;
+  text-transform: uppercase;
+
+}
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 35px;
+  animation-name: moveInLeft;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+
+
+
+
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 9.8px;
+  animation-name: moveInRight;
+  animation-duration: 3s;
+
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+
+
+
+  }
+
+
+}
+
+@keyframes moveInRight{
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0px);
+
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
