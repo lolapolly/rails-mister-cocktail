@@ -1,9 +1,17 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/2225580/pexels-photo-2225580.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);">
+<header class="banner">
+  <div class="cocktail-logo">
+    <%= image_tag "cocktail_2.png", alt: "logo" %>
+  </div>
+
   <div class="container">
     <strong><h1>Cocktails Word!</h1></strong>
     <p>Create your own cocktails and be a master.</p>
+    <%= link_to new_cocktail_path do %>
+      <i class="fas fa-plus"> Create a new cocktail</i>
+    <% end %>
   </div>
-</div>
+</header>
+
 
 <div class="d-flex justify-content-center">
   <% @cocktails.each do |cocktail| %>
@@ -29,6 +37,5 @@
 
 
 
-<div class="btn-treehouse"><%= link_to "Create a new cocktail", new_cocktail_path  %></div>
 
 
