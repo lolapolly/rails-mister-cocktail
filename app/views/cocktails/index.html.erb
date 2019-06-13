@@ -7,17 +7,28 @@
 
 <div class="d-flex justify-content-center">
   <% @cocktails.each do |cocktail| %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)">
-    <%= link_to cocktail.name, cocktail_path(cocktail)%>
-      <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-      <i class="fas fa-trash"></i>
-      <% end %>
-  </div>
-<% end %>
+    <% if cocktail.photo.url %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+        <%= link_to cocktail.name, cocktail_path(cocktail)%>
+        <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
+        <%= link_to cocktail.name, cocktail_path(cocktail)%>
+        <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 
 
 
-<div class="btn btn-primary d-flex justify-content-center text-white w=100"><%= link_to "Create a new cocktail", new_cocktail_path  %></div>
+
+
+<div class="btn-treehouse"><%= link_to "Create a new cocktail", new_cocktail_path  %></div>
 
 
