@@ -15,27 +15,6 @@
   </div>
 </header>
 
-
-<div class="d-flex justify-content-center">
-  <% @cocktails.each do |cocktail| %>
-    <% if cocktail.photo.url %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-        <%= link_to cocktail.name, cocktail_path(cocktail)%>
-        <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="fas fa-trash"></i>
-        <% end %>
-      </div>
-    <% else %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
-        <%= link_to cocktail.name, cocktail_path(cocktail)%>
-        <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <i class="fas fa-trash"></i>
-        <% end %>
-      </div>
-    <% end %>
-  <% end %>
-</div>
-
 <section class="section-cocktails">
   <div>
     <h2 class="heading-primary-sub pink">
@@ -45,18 +24,51 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <div class="card">
-          <div class="card side front">
-            <div class="card_picture">
-              &nbsp;
-            </div>
-            <h4 class="card_heading">
-             <span class="card_heading">
-               name
-             </span>
+        <% @cocktails.each do |cocktail| %>
+        <% if cocktail.photo.url %>
+          <div class="card">
+            <div class="card side front">
+              <div class="card_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">">
+                     &nbsp;
+              </div>
+              <h4 class="card_heading">
+               <span class="card_heading">
+                 <%= link_to cocktail.name, cocktail_path(cocktail)%>
+               </span>
 
-            </h4>
-            <div class="card_details">
+              </h4>
+              <div class="card_details">
+                <ul>
+                  <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
+                  <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                          <i class="fas fa-trash"></i>
+                        <% end %>
+                  </li>
+                </ul>
+
+
+
+            <% else %>
+               <div class="card">
+                 <div class="card side front">
+                  <div class="card_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">">
+                    &nbsp;
+                  </div>
+                   <h4 class="card_heading">
+                    <span class="card_heading">
+                      <%= link_to cocktail.name, cocktail_path(cocktail)%>
+                    </span>
+
+                   </h4>
+                   <div class="card_details">
+                     <ul>
+                       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
+                       <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                               <i class="fas fa-trash"></i>
+                             <% end %>
+                       </li>
+                     </ul>
+              <% end %>
 
             </div>
           </div>
@@ -74,6 +86,7 @@
 
         </div>
       </div>
+      <% end %>
     </div>
   </div>
 
