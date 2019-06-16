@@ -32,17 +32,18 @@
 
 
 .side {
-  transition: all .8s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25rem;
-  width: 100%;
+  // transition: all .8s;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  height: 28rem;
   border-radius: 3px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
   position: relative;
   background-color: white;
+  max-width: 300px;
+  margin-bottom: 16px;
 
 
 

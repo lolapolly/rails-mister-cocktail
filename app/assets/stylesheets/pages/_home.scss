@@ -13,4 +13,7 @@ body {
   background-color: #ffff;
   padding: 23rem 0 50rem 0;
   margin-top: -18rem;
+  display: grid;
+  grid-template-columns:  2fr 2fr;
+  grid-gap: 16px;
 }
