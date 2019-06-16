@@ -26,18 +26,18 @@
       <div class="col">
         <% @cocktails.each do |cocktail| %>
         <% if cocktail.photo.url %>
-          <div class="card">
-            <div class="card side front">
-              <div class="card_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">">
+          <div class="box">
+            <div class="box side front">
+              <div class="box_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
                      &nbsp;
               </div>
-              <h4 class="card_heading">
-               <span class="card_heading">
+              <h4 class="box_heading">
+               <span class="box_heading">
                  <%= link_to cocktail.name, cocktail_path(cocktail)%>
                </span>
 
               </h4>
-              <div class="card_details">
+              <div class="box_details">
                 <ul>
                   <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
                   <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -49,18 +49,18 @@
 
 
             <% else %>
-               <div class="card">
-                 <div class="card side front">
-                  <div class="card_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">">
+               <div class="box">
+                 <div class="box side front">
+                  <div class="box_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
                     &nbsp;
                   </div>
-                   <h4 class="card_heading">
-                    <span class="card_heading">
+                   <h4 class="box_heading">
+                    <span class="box_heading">
                       <%= link_to cocktail.name, cocktail_path(cocktail)%>
                     </span>
 
                    </h4>
-                   <div class="card_details">
+                   <div class="box_details">
                      <ul>
                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
                        <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -74,18 +74,8 @@
           </div>
         </div>
       </div>
-      <div class="col">
-        <div class="card">
-          2 of 3
 
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-        3 of 3
 
-        </div>
-      </div>
       <% end %>
     </div>
   </div>

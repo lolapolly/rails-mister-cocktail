@@ -1,26 +1,26 @@
-.card-category {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: bold;
-  border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 400px;
-  margin: 8px;
+// .box-category {
+//   background-size: cover;
+//   background-position: center;
+//   height: 180px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   font-size: 24px;
+//   font-weight: bold;
+//   border-radius: 5px;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   width: 400px;
+//   margin: 8px;
 
-  a {
-    color: white;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    text-decoration: none;
-  }
-}
+//   a {
+//     color: white;
+//     text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//     text-decoration: none;
+//   }
+// }
 
 
-.card {
+.box {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
@@ -29,6 +29,8 @@
 
 
 }
+
+
 .side {
   transition: all .8s;
   position: absolute;
@@ -40,33 +42,33 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   overflow: hidden;
   position: relative;
-
-
-}
-
-.card:hover {
-  transform: rotateY(180deg);
-
-}
-
-.front {
   background-color: white;
 
 
 
-  }
+}
 
-.front:hover {
-  transform: rotateY(180deg);
+// .box:hover {
+//   transform: rotateY(180deg);
+
+// }
+
+// .front {
+//   background-color: white;
 
 
-  }
+
+//   }
+
+// .front:hover {
+//   transform: rotateY(180deg);
+
+
+//   }
 
 
 
-.card_picture {
-  background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71),
-  url("https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+.box_picture {
   background-size: cover;
   background-blend-mode: screen;
   background-position: center;
@@ -76,7 +78,7 @@
   height: 32%;
 }
 
-.card_heading {
+.box_heading {
   font-size: 1.2rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -97,7 +99,7 @@
 
 }
 
-.card_details {
+.box_details {
   padding: 3px;
 
 
