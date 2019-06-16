@@ -20,4 +20,72 @@
 }
 
 
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+
+
+
+
+}
+.side {
+  transition: all .8s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25rem;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+
+}
+
+.card:hover {
+  transform: rotateY(180deg);
+
+}
+
+.front {
+  background-color: white;
+
+
+
+  }
+
+.front:hover {
+  transform: rotateY(180deg);
+
+
+  }
+
+
+
+.card_picture {
+  background-image: linear-gradient(
+    to right, rgb(106, 130, 251),
+    rgb(252, 92, 125)),
+  url("https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+  background-blend-mode: screen;
+  background-position: center;
+  background-position: top;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+  height: 32%;
+}
+
+.card_heading {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: right
+  color:blue;
+  position: absolute;
+  top: 12rem;
+  right: 2rem;
+
+}
+
 

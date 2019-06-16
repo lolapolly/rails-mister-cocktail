@@ -8,6 +8,7 @@
   background-position: top;
   // padding: 150px 0;
   height: 95vh;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position:relative;
 }
@@ -74,6 +75,7 @@
   animation-name: moveInLeft;
   animation-duration: 3s;
   animation-timing-function: ease-in-out;
+  margin-bottom: 32px;
 
 }
 
