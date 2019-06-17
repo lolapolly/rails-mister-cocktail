@@ -32,6 +32,21 @@
 
 }
 
+.btn-purple-border {
+  color: rgba(106, 130, 251, 0.8);
+  border: 0.5mm solid rgba(106, 130, 251, 0.8);
+  border-radius: 10px;
+
+}
+
+.btn-purple-border:hover {
+  color: rgba(252, 92, 125,0.8);
+  border: 0.5mm solid rgba(252, 92, 125,0.8);
+  border-radius: 10px;
+
+}
+
+
 .btn-orange-border {
 
   text-align: none;
