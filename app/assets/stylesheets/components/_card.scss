@@ -51,6 +51,15 @@
 
 }
 
+.side:hover {
+  /*opacity: 1;*/
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1.1);
+
+}
+
 // .box:hover {
 //   transform: rotateY(180deg);
 
