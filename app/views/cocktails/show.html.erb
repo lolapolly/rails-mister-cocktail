@@ -1,20 +1,46 @@
-<div class="text-center">
-  <h1><%= @cocktail.name %></h1>
-  <%= link_to 'See ingredients', cocktail_doses_path(@cocktail)%></div>
-<div class="container mx-3">
-  <br>
-  <h3>Add an ingredient</h3>
-    <%= simple_form_for [@cocktail, @dose] do |f|%>
-    <%= f.input :description %>
-    <%= f.association :ingredient %>
-    <%= f.submit "Add an ingredient", class: "btn btn-primary"%>
-    <% end %>
-    <br>
-  <%= link_to "Back", root_path %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="/">
+    <%= image_tag "cocktail_2.png", alt: "logo", class:"logo" %>
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Contact Lola</a>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 
+<div class="text-center">
+  <h2><%= @cocktail.name %></h2>
 
+  <div class="cocktail-show" style="background-image: url('<%= cl_image_path @cocktail.photo, height: 450, width: 450, crop: :fill %>');">
 
+  </div>
 
+  <%= link_to 'See ingredients', cocktail_doses_path(@cocktail)%>
+</div>
+  <div class="container mx-3">
+    <br>
+    <h3>Add an ingredient</h3>
+      <%= simple_form_for [@cocktail, @dose] do |f|%>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit "Add an ingredient", class: "btn btn-purple-border"%>
+      <% end %>
+      <br>
+    <%= link_to "Back", root_path %>
+  </div>
 
 

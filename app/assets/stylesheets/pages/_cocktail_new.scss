@@ -19,9 +19,23 @@
     font: $body-font;
     text-align: center;
    }
+
+   input {
+
+
+   }
 }
 
+.cocktail-show {
+  height: 28rem;
+  width: 28rem;
+  background-image: cover;
+  background-position: center;
+}
 
+.inner-white-box{
+  margin: 0 auto;
+}
 @media(max-width: 992px) {
   .white-box {
     height: auto;

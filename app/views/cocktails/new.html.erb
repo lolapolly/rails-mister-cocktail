@@ -1,10 +1,35 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <a class="navbar-brand" href="/">
+    <%= image_tag "cocktail_2.png", alt: "logo", class:"logo" %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Learn more about me</a>
+      </li>
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Contact Lola</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
 <div class="white-box">
-  <h2 class="">Create a new cocktail</h2>
-    <%= simple_form_for @cocktail do |f|%>
-      <%= f.input :name %>
-      <%= f.input :photo %>
-      <%= f.input :photo_cache, as: :hidden %>
-      <%= f.submit "add a cocktail", class: "btn btn-purple-border" %>
-    <% end %>
+ <div class="inner-white-box">
+    <h2>Create</h2>
+    <h2>a new cocktail</h2>
+      <%= simple_form_for @cocktail do |f|%>
+        <%= f.input :name %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.submit "add a cocktail", class: "btn btn-purple-border" %>
+      <% end %>
+   </div>
 </div>
 

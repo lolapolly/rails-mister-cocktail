@@ -45,7 +45,9 @@
   max-width: 300px;
   margin-bottom: 16px;
 
-
+  a {
+    text-decoration:none;
+  }
 
 }
 
@@ -88,12 +90,18 @@
   top: 25%;
   right: 4%;
 
+
+  a:hover{
+    color: rgba(252, 92, 125,0.8)
+  }
+
   span {
     background-image: linear-gradient(
     to right, rgba(106, 130, 251, 0.7),
     rgba(252, 92, 125,0.7));
     padding: 2px 1rem;
     -webkit-box-decoration-break: clone;
+
 
   }
 

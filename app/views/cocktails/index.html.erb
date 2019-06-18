@@ -1,89 +1,91 @@
-<header class="banner">
-  <div class="cocktail-logo">
-    <%= image_tag "cocktail_2.png", alt: "logo", class:"logo" %>
-  </div>
+<div class=margine>
+  <header class="banner">
+    <div class="cocktail-logo">
+      <%= image_tag "cocktail_2.png", alt: "logo", class:"logo" %>
+    </div>
 
-  <div class="text-box">
-    <h1 class="heading-primary" >
-      <span class="heading-primary-main"> Cocktail world</span>
-      <span class="heading-primary-sub"> Create your own cocktails and become a master</span>
-    </h1>
+    <div class="text-box">
+      <h1 class="heading-primary" >
+        <span class="heading-primary-main"> Cocktail world</span>
+        <span class="heading-primary-sub"> Create your own cocktails and become a master</span>
+      </h1>
 
-    <%= link_to new_cocktail_path, class:"btn btn-white-border" do %>
-        <i class="fas fa-plus" style="font:$headers-font;"> Create a new cocktail</i>
-    <% end %>
-  </div>
-</header>
-  <div class="heading-primary-sub pink text-center">
+      <%= link_to new_cocktail_path, class:"btn btn-white-border" do %>
+          <i class="fas fa-plus" style="font:$headers-font;"> Create a new cocktail</i>
+      <% end %>
+    </div>
+  </header>
+    <div class="heading-primary-sub pink text-center">
 
-      <h2>Explore our cocktails and add your touch</h2>
-      <h2>with new ingredients</h2>
-  </div>
+        <h2>Explore our cocktails and add your touch</h2>
+        <h2>with new ingredients</h2>
+    </div>
 
-  <section class="section-cocktails">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <% @cocktails.each do |cocktail| %>
-          <% if cocktail.photo.url %>
-            <div class="box">
-              <div class="box side front">
-                <div class="box_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-                       &nbsp;
-                </div>
-                <h4 class="box_heading">
-                 <span class="box_heading">
-                   <%= link_to cocktail.name, cocktail_path(cocktail)%>
-                 </span>
-
-                </h4>
-                <div class="box_details">
-                  <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
-                    <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                            <i class="fas fa-trash"></i>
-                          <% end %>
-                    </li>
-                </ul>
-
-
-
-            <% else %>
-               <div class="box">
-                 <div class="box side front">
-                  <div class="box_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
-                    &nbsp;
+    <section class="section-cocktails">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <% @cocktails.each do |cocktail| %>
+            <% if cocktail.photo.url %>
+              <%= link_to cocktail_path(cocktail) do %>
+              <div class="box">
+                <div class="box side front">
+                  <div class="box_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+                         &nbsp;
                   </div>
-                   <h4 class="box_heading">
-                    <span class="box_heading">
-                      <%= link_to cocktail.name, cocktail_path(cocktail)%>
-                    </span>
+                  <h4 class="box_heading">
+                   <span class="box_heading">
+                     <%= cocktail.name %>
+                   </span>
 
-                   </h4>
-                   <div class="box_details">
-                     <ul>
-                      <br>
-                      <br>
-                       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
-                       <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                               <i class="fas fa-trash"></i>
-                             <% end %>
-                       </li>
-                     </ul>
-            <% end %>
+                  </h4>
+                  <div class="box_details">
+                    <ul>
+                      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
+                      <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                              <i class="fas fa-trash"></i>
+                            <% end %>
+                      </li>
+                  </ul>
+                <% end %>
 
+
+
+              <% else %>
+                <%= link_to cocktail_path(cocktail) do %>
+                 <div class="box">
+                   <div class="box side front">
+                    <div class="box_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
+                      &nbsp;
+                    </div>
+                     <h4 class="box_heading">
+                      <span class="box_heading">
+                        <%= cocktail.name%>
+                      </span>
+
+                     </h4>
+                     <div class="box_details">
+                       <ul>
+                        <br>
+                        <br>
+                         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
+                         <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                                 <i class="fas fa-trash"></i>
+                               <% end %>
+                         </li>
+                       </ul>
+
+              </div>
+              <% end %>
+              <% end %>
             </div>
           </div>
         </div>
+        <% end %>
       </div>
-
-
-      <% end %>
     </div>
-  </div>
-
-
-</section>
+  </section>
+</div>
 
 
 
