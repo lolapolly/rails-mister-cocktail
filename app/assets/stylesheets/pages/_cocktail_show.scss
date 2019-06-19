@@ -1,0 +1,23 @@
+.cocktail-show {
+  height: 28rem;
+  width: 28rem;
+  background-image: cover;
+  background-position: center;
+  position: relative;
+  z-index: 2;
+  margin-left: 16rem;
+}
+
+
+
+.pattern {
+    position: absolute;
+    width: 28rem;
+    background-color: rgba(241, 118, 142, 0.7);
+    height: 28rem;
+    top: 8%;
+    right: 8%;
+    z-index: 1;
+
+
+}

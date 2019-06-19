@@ -24,10 +24,17 @@
 
 <div class="text-center">
   <h2><%= @cocktail.name %></h2>
+    <div class="pattern">
 
-  <div class="cocktail-show" style="background-image: url('<%= cl_image_path @cocktail.photo, height: 450, width: 450, crop: :fill %>');">
+    </div>
+    <div class="cocktail-show" style="background-image: url('<%= cl_image_path @cocktail.photo, height: 450, width: 450, crop: :fill %>');">
+
 
   </div>
+  <br>
+  <br>
+  <br>
+
 
   <%= link_to 'See ingredients', cocktail_doses_path(@cocktail)%>
 </div>
