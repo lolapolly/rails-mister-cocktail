@@ -6,10 +6,15 @@
   border-radius: 100px;
   transition: all .2s;
   border: 0.5mm solid #fff ;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif !important;
   font-weight: lighter;
   color: #fff;
 
+
+}
+
+.fas {
+  font-family: 'Roboto', sans-serif !important;
 
 }
 
@@ -54,4 +59,47 @@
   padding: 16px 20px;
   transition: .2s;
 }
+
+@media(max-width: 992px) {
+
+.btn:link,
+.btn:visited {
+  padding: 8px 24px;
+
+}
+
+}
+
+@media(max-width: 768px) {
+
+.btn:link,
+.btn:visited {
+  padding: 8px 24px;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

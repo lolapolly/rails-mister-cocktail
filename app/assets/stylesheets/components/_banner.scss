@@ -56,8 +56,8 @@
 
 }
 
-.text-box i {
-  font: $headers-font !important;
+.text-box .fas {
+  font-family: $headers-font;
 }
 
 .heading-primary {
@@ -134,13 +134,78 @@
 
 
 
+@media(max-width: 992px) {
+  .banner {
+    height: 57vh;
+    width: 100%;
+    border-radius: 8px;
+
+
+  }
+
+  .heading-primary-main {
+    font-size: 1.5rem;
+  }
+
+  .heading-primary-sub {
+    font-size: 1rem;
+
+    h2 {
+    font-size: 1.3rem;
+    margin: 1rem;
 
 
 
+    }
+  }
+
+  .text-box {
+    padding: 8px;
+  }
+}
+
+@media(max-width: 768px) {
+
+  .banner {
+    height: 75vh ;
+    width: 100%;
+    border-radius: 8px;
 
 
+  }
+
+  .heading-primary-main {
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+  }
+
+   .heading-primary-sub {
+    font-size: 1rem;
+    letter-spacing: 8px;
+
+    h2 {
+
+    font-size: 1.3rem;
+    margin: 1rem;
 
 
+    }
+
+  .fa-plus:before {
+    opacity: 0;
+  }
+
+
+  }
+
+  .text-box {
+    padding: 24px;
+  }
+
+  .fa-plus:before {
+    opacity: 0;
+  }
+}
 
 
 
