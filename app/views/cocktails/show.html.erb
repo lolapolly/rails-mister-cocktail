@@ -27,7 +27,12 @@
     <div class="pattern">
 
     </div>
-    <div class="cocktail-show" style="background-image: url('<%= cl_image_path @cocktail.photo, height: 450, width: 450, crop: :fill %>');">
+    <% if @cocktail.photo.url %>
+      <div class="cocktail-show" style="background-image: url('<%= cl_image_path @cocktail.photo, height: 450, width: 450, crop: :fill %>');">
+    <% else %>
+      <div class="cocktail-show" style="background-image: url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
+
+    <% end %>
 
 
   </div>

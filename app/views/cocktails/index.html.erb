@@ -21,74 +21,31 @@
     <h2>with new ingredients</h2>
   </div>
 
-  <section class="section-cocktails d-flex">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <% @cocktails.each do |cocktail| %>
-            <% if cocktail.photo.url %>
-              <%= link_to cocktail_path(cocktail) do %>
-              <div class="box">
-                <div class="box side front">
-                  <div class="box_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
-
-                  </div>
-                  <h4 class="box_heading">
-                   <span class="box_heading">
-                     <%= cocktail.name %>
-                   </span>
-
-
-                  </h4>
-                  <br>
-                  <br>
-                  <div class="box_details">
-                    <ul>
-                      <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
-                      <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                              <i class="fas fa-trash"></i>
-                            <% end %>
-                      </li>
-                  </ul>
-                <% end %>
-
-
-
-            <% else %>
-              <%= link_to cocktail_path(cocktail) do %>
-               <div class="box">
-                 <div class="box side front">
-                  <div class="box_picture" style="background-image: linear-gradient(to right, #FFAF7B, #D76D77, #3A1C71), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
-                    &nbsp;
-                  </div>
-                   <h4 class="box_heading">
-                    <span class="box_heading">
-                      <%= cocktail.name%>
-                    </span>
-
-                   </h4>
-                   <div class="box_details">
-                     <ul>
-                      <br>
-                      <br>
-                       <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo sed, eum minima provident autem asperiores nesciunt. Distinctio ex, facilis excepturi recusandae atque, vero, quaerat, veniam hic impedit tenetur quas! Eum. </li>
-                       <li>  <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                               <i class="fas fa-trash"></i>
-                             <% end %>
-                       </li>
-                     </ul>
-
-            </div>
-            <% end %>
-            <% end %>
-          </div>
+  <div class="container d-flex">
+    <% @cocktails.each do |cocktail| %>
+      <% if cocktail.photo.url %>
+        <%= link_to cocktail_path(cocktail) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill %>')">
+          <%= cocktail.name %>
+          <% end %>
+          <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
         </div>
-      </div>
+      <% else %>
+        <%= link_to cocktail_path(cocktail) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
+          <%= cocktail.name %>
+          <% end %>
+          <%= link_to cocktail, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class="fas fa-trash"></i>
+          <% end %>
+        </div>
       <% end %>
-    </div>
+    <% end %>
   </div>
-</section>
-</div>
+
+
 
 
 
