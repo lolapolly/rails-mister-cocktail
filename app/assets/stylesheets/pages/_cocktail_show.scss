@@ -31,3 +31,47 @@
   margin-bottom: 2.2rem;
   color: rgba(241, 118, 142, 0.9);
 }
+
+
+.show-ingredients {
+  margin: 2% auto;
+  border: 2px dotted purple;
+  width: 11.5rem;
+  padding: 1rem;
+}
+
+h5 {
+  color: purple;
+}
+
+@media(max-width: 992px) {
+  .cocktail-show {
+    background-image: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 0 auto;
+
+
+  }
+
+  .pattern {
+    display: none;
+
+  }
+}
+
+@media(max-width: 768px) {
+  .cocktail-show {
+    background-image: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin: 0 auto;
+
+
+  }
+
+  .pattern {
+    display: none;
+  }
+}
+

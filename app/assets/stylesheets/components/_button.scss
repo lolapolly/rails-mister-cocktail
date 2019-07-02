@@ -33,18 +33,22 @@
 
 }
 
-.btn-purple-border {
+.button-purple-border {
   color: rgba(106, 130, 251, 0.8);
   border: 0.5mm solid rgba(106, 130, 251, 0.8);
-  border-radius: 10px;
+  border-radius: 100px;
+  padding: 15px 40px;
+
 
 }
 
-.btn-purple-border:hover {
+.button-purple-border:hover {
   color: rgba(252, 92, 125,0.8);
   border: 0.5mm solid rgba(252, 92, 125,0.8);
-  border-radius: 10px;
-  width: 24%;
+  border-radius: 100px;
+  padding: 15px 40px;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 
 }
 
