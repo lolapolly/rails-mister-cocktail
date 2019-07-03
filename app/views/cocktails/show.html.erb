@@ -24,18 +24,24 @@
 
   <div class="text-center">
     <h2 class=cocktail-title><%= @cocktail.name.capitalize %></h2>
-      <div class="pattern">
+     <div class= "d-flex justify-content-around align-items-center">
+        <div class="pattern">
 
+        </div>
+
+         <% if @cocktail.photo.url %>
+           <div class="cocktail-show" style="background-image: url('<%= cl_image_path @cocktail.photo, height: 450, width: 450, crop: :fill %>');">
+         <% else %>
+           <div class="cocktail-show" style="background-image: url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
+
+         <% end %>
+
+
+           </div>
+          <div class="mx-9">
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci ipsum rerum, modi corporis amet cupiditate debitis, numquam officiis eligendi, nostrum nulla doloremque culpa voluptate provident officia, pariatur nobis tempora! Laborum"
+          </div>
       </div>
-      <% if @cocktail.photo.url %>
-        <div class="cocktail-show" style="background-image: url('<%= cl_image_path @cocktail.photo, height: 450, width: 450, crop: :fill %>');">
-      <% else %>
-        <div class="cocktail-show" style="background-image: url('https://images.pexels.com/photos/68672/beach-beverage-caribbean-cocktail-68672.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')">
-
-      <% end %>
-
-
-    </div>
       <br>
       <br>
       <h5 class=text-center>Ingredients</h5>
